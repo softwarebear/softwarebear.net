@@ -35,18 +35,11 @@
       angular.bootstrap(document, ['myApp']);
     });
   </script>
-  <title>My AngularJS App</title>
-  <link rel="stylesheet" href="css/app.css">
-</head>
-<body ng-cloak>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
-
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
-
-</body>
+    <title>Welcome to the cave of the SoftwareBear</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body ng-cloak>
+    <div>Hello world ...</div>
+  </body>
 </html>
+
