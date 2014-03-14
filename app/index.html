@@ -1,23 +1,151 @@
-<!doctype html>
-<html lang="en" ng-app="myApp">
+<!DOCTYPE html>
+<html lang="en" ng-app="swb.app">
 <head>
-  <meta charset="utf-8">
-  <title>Welcome to the cave of the SoftwareBear</title>
-  <link rel="stylesheet" href="css/app.css"/>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!-- Basic Styles -->
+	<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+	<!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+	<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="css/swb.css">	
+
+	<!-- FAVICONS -->
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+	<!-- GOOGLE FONT -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+	<title>Welcome to the cave of the SoftwareBear</title>
 </head>
 <body>
 
-  <div>Hello world ...</div>
+	<header id="header">
+		<div>
+			<h1>Softwarebear</h1>
+		</div>
+	</header>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular/angular-route.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
+	<!-- Left panel : Navigation area -->
+	<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+	<aside id="left-panel">
+
+		<nav>
+			<ul>
+				<li class="active">
+					<a href="#home" title="Home"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Home</span></a>
+				</li>
+				<li>
+					<a href="#angular"><i class="fa fa-lg fa-fw"></i> <span class="menu-item-parent">Angular JS</span></a>
+				</li>
+			</ul>
+		</nav>
+
+		<!--span class="minifyme"> <i class="fa fa-arrow-circle-left hit"></i> </span-->
+
+	</aside>
+
+	<div id="main" role="main" ng-view>
+
+	</div>
+
+	<div id="shortcut">
+		<ul>
+			<li>
+				<a href="#inbox.html" class="jarvismetro-tile big-cubes bg-color-blue"> <span class="iconbox"> <i class="fa fa-envelope fa-4x"></i> <span>Mail <span class="label pull-right bg-color-darken">14</span></span> </span> </a>
+			</li>
+			<li>
+				<a href="#calendar.html" class="jarvismetro-tile big-cubes bg-color-orangeDark"> <span class="iconbox"> <i class="fa fa-calendar fa-4x"></i> <span>Calendar</span> </span> </a>
+			</li>
+			<li>
+				<a href="#gmap-xml.html" class="jarvismetro-tile big-cubes bg-color-purple"> <span class="iconbox"> <i class="fa fa-map-marker fa-4x"></i> <span>Maps</span> </span> </a>
+			</li>
+			<li>
+				<a href="#invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox"> <i class="fa fa-book fa-4x"></i> <span>Invoice <span class="label pull-right bg-color-darken">99</span></span> </span> </a>
+			</li>
+			<li>
+				<a href="#gallery.html" class="jarvismetro-tile big-cubes bg-color-greenLight"> <span class="iconbox"> <i class="fa fa-picture-o fa-4x"></i> <span>Gallery </span> </span> </a>
+			</li>
+			<li>
+				<a href="javascript:void(0);" class="jarvismetro-tile big-cubes selected bg-color-pinkDark"> <span class="iconbox"> <i class="fa fa-user fa-4x"></i> <span>My Profile </span> </span> </a>
+			</li>
+		</ul>
+	</div>
+
+	<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/libs/plugin/pace/pace.min.js"></script>
+
+	<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script>
+		if (!window.jQuery) {
+			document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+		}
+	</script>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script>
+		if (!window.jQuery.ui) {
+			document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+		}
+	</script>
+
+	<!-- JS TOUCH : include this plugin for mobile drag / drop touch events
+	<script src="js/libs/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> -->
+
+	<!-- BOOTSTRAP JS -->
+	<script src="js/libs/bootstrap/bootstrap.min.js"></script>
+
+	<!-- CUSTOM NOTIFICATION -->
+	<script src="js/libs/notification/SmartNotification.min.js"></script>
+
+	<!-- JARVIS WIDGETS -->
+	<script src="js/libs/smartwidgets/jarvis.widget.min.js"></script>
+
+	<!-- EASY PIE CHARTS -->
+	<script src="js/libs/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+	<!-- SPARKLINES -->
+	<script src="js/libs/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- JQUERY VALIDATE -->
+	<script src="js/libs/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+	<!-- JQUERY MASKED INPUT -->
+	<script src="js/libs/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+	<!-- JQUERY SELECT2 INPUT -->
+	<script src="js/libs/plugin/select2/select2.min.js"></script>
+
+	<!-- JQUERY UI + Bootstrap Slider -->
+	<script src="js/libs/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+	<!-- browser msie issue fix -->
+	<script src="js/libs/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+	<!-- FastClick: For mobile devices -->
+	<script src="js/libs/plugin/fastclick/fastclick.js"></script>
+
+	<!-- In production use:
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+	-->
+	<script src="js/libs/angular/angular.js"></script>
+	<script src="js/libs/angular/angular-route.js"></script>
+
+	<script src="js/swb/swb.theme.smartAdmin.initialization.js"></script>
+	<script src="js/swb/swb.theme.smartAdmin.configuration.js"></script>
+
+	<script src="js/app.js"></script>
+
+	<script src="js/swb/swb.controller.home.js"></script>
+	<script src="js/swb/swb.controller.angular.js"></script>
+	<script src='js/swb/swb.controllers.js'></script>
 </body>
 </html>

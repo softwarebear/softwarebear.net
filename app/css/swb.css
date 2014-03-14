@@ -1,0 +1,5 @@
+#logo-group > div > span {
+  display: inline-block;
+  height: 70px;
+  float: left;
+}
