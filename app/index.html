@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="swb.app">
+<html lang="en" ng-app='swb.app'>
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="">
@@ -30,7 +30,15 @@
 
 	<header id="header">
 		<div>
-			<h1>Softwarebear</h1>
+			<h1>SoftwareBear</h1>
+		</div>
+
+		<div class="pull-right">
+			<!-- collapse menu button -->
+			<div id="hide-menu" class="btn-header pull-right">
+				<span> <a href="javascript:void(0);" title="Collapse Menu"><i class="fa fa-reorder"></i></a> </span>
+			</div>
+			<!-- end collapse menu -->
 		</div>
 	</header>
 
@@ -133,19 +141,24 @@
 	<!-- FastClick: For mobile devices -->
 	<script src="js/libs/plugin/fastclick/fastclick.js"></script>
 
-	<!-- In production use:
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-	-->
-	<script src="js/libs/angular/angular.js"></script>
-	<script src="js/libs/angular/angular-route.js"></script>
+	<!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip -->
+	<script src="js/libs/plugin/flot/jquery.flot.cust.js"></script>
+	<script src="js/libs/plugin/flot/jquery.flot.tooltip.js"></script>
+	<script src="js/libs/plugin/flot/jquery.flot.resize.js"></script>
+	<script src="js/libs/plugin/vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+	<script src="js/libs/plugin/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="js/libs/plugin/fullcalendar/jquery.fullcalendar.min.js"></script>
 
-	<script src="js/swb/swb.theme.smartAdmin.initialization.js"></script>
-	<script src="js/swb/swb.theme.smartAdmin.configuration.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-route.js"></script>
 
-	<script src="js/app.js"></script>
+	<script src="js/libs/smartAdmin.js"></script>
 
+	<script src='js/swb/swb.constants.js'></script>
 	<script src="js/swb/swb.controller.home.js"></script>
 	<script src="js/swb/swb.controller.angular.js"></script>
 	<script src='js/swb/swb.controllers.js'></script>
+
+	<script src="js/app.js"></script>
 </body>
 </html>

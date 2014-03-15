@@ -1,10 +1,10 @@
 (function(){'use strict';
 
 angular
-.module('swb.controller.home',[])
-.controller('swb.controller.home', ['$scope', 
-    function($scope){
-        $scope.author = "softwareBear";
+.module('swb.controller.home', ['swb.constants'])
+.controller('swb.controller.home', ['$scope', 'AUTHOR',
+    function($scope, AUTHOR){
+        $scope.author = AUTHOR;
 }]);
 
 })();

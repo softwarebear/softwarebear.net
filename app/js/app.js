@@ -1,12 +1,12 @@
 (function(){'use strict';
 
 angular
-.module('swb.app', ['ngRoute', 'swb.controllers'])
-.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+.module('swb.app', ['ngRoute', 'smartAdmin', 'swb.constants', 'swb.controllers'])
+.config(['$routeProvider', function($routeProvider) {
 
     $routeProvider.when('/home', {
         templateUrl: 'templates/home.html',
-        controller: 'swb.controller.home'
+        controller: 'swb.controller.home',
     });
 
     $routeProvider.when('/angular', {
